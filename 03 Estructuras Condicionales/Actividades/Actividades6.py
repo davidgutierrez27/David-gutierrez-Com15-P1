@@ -18,6 +18,7 @@
 
 import random 
 numeros_aleatorios = [random.randint(1, 100) for i in range(50)]  #generamos num aletorios
+print(numeros_aleatorios)
 
 from statistics import mode, median, mean                         #llamamos a las funciones
 media = mean(numeros_aleatorios)                                  #almacenamos en una variable los resultaao
