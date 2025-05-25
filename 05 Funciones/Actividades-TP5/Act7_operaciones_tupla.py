@@ -1,18 +1,27 @@
-#Crear una función llamada tabla_multiplicar(numero) que reciba un
-# número como parámetro y imprima la tabla de multiplicar de ese
-# número del 1 al 10. Pedir al usuario el número y llamar a la función
+# Crear una función llamada operaciones_basicas(a, b) que reciba
+# dos números como parámetros y devuelva una tupla con el resultado de sumarlos,
+# restarlos, multiplicarlos y dividirlos. Mostrar los resultados de forma clara.
 
 
 """ FUNCIONES """
-
-def tabla_multiplicar(numero):
-    print("La tabla de", numero, "es:")
-    for x in range(1,11):
-        print(numero, "x" , x, "=",(numero*x))
-
+def operaciones_basicas(a, b):
+    suma = a + b
+    resta = a - b
+    multiplicacion = a * b
+    division = a / b if b != 0 else "No se puede dividir entre 0"
+    return suma, resta, multiplicacion, division
 
 
 """ PROGRAMA PRINCIPAL """
+# Solicitar los números al usuario
+num1 = float(input("Ingrese el primer número: "))
+num2 = float(input("Ingrese el segundo número: "))
 
-num = int(input("Que tabla necesitas: "))
-tabla_multiplicar(num)
+# Obtener los resultados
+suma, resta, multiplicacion, division = operaciones_basicas(num1, num2)
+
+# Mostrar los resultados
+print(f"Suma: {suma}")
+print(f"Resta: {resta}")
+print(f"Multiplicación: {multiplicacion}")
+print(f"División: {division}")
